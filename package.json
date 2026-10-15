@@ -1,0 +1,15 @@
+{
+  "name": "larsparet-teknisk-poc",
+  "private": true,
+  "version": "6.0.0",
+  "scripts": {
+    "dev": "wrangler pages dev dist",
+    "deploy": "wrangler pages deploy dist",
+    "db:create": "wrangler d1 create larsparet-poc",
+    "db:migrate:local": "wrangler d1 migrations apply larsparet-poc --local",
+    "db:migrate:remote": "wrangler d1 migrations apply larsparet-poc --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
